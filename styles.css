@@ -1,0 +1,364 @@
+* {
+  box-sizing: border-box;
+  margin:0;
+      
+}
+
+body {
+  margin:0 6rem;
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.3rem;
+}    
+    
+img {
+  width: 80vw;
+  height: auto;
+    
+}
+
+h1 {
+  margin:1.6rem;
+  padding-top: 2rem;
+  padding-bottom: 1rem;
+  font-size: 3rem;
+
+}
+
+h2 {
+    margin: 1rem 3rem ;
+    font-weight: 900;
+}
+ 
+h3 {
+  margin: 1rem 1.5rem 2rem 1.5rem;
+  font-weight: 600;
+
+}
+.div-first {
+  font-size: 1.0rem;
+  font-weight: 100;
+  margin:20px 0;
+  width: 75%;
+}
+
+.svg-div-first {
+  margin:5px 10px;
+ 
+}
+
+main {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-evenly;
+
+}
+
+section {
+order: 1;
+
+}
+
+.aside-svg {
+  order:2;
+  display:grid;
+  grid-template-columns: 35% 65%;
+  grid-gap: 10px;
+  justify-content: space-between;
+  box-shadow: black;
+  margin-top: 25px;
+  border-radius: 8px;  
+  box-shadow: 0 0 20px 0;
+
+}
+.span-op {
+  padding: 0;
+  margin: 25px 0;
+  font-size: 0.6rem;
+   
+}
+
+.span-biger  {
+  padding: 0 10px;
+  margin: 15px 0;
+  font-size: 0.8rem;
+
+}
+
+.span-orange {
+  color: #f39121;
+  font-size: 0.7rem;
+
+}
+
+svg {
+  margin: 25px;
+
+}
+
+.ingredients {
+  display:grid;
+  width: 70%;
+  padding-right: 1rem;
+
+}
+.container {
+  display: block;
+  position: relative;
+  padding-left: 5px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  
+}
+
+/* Hide the browser's default checkbox */
+.container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: -30px;
+  height: 30px;
+  width: 30px;
+  background-color: #eee;
+  border-radius: 6px;
+    
+}
+
+/* On mouse-over, add a grey background color */
+.container:hover input ~ .checkmark {
+  background-color: #ccc;
+
+}
+
+/* When the checkbox is checked, add a blue background */
+.container input:checked ~ .checkmark {
+  background-color: #f39121;
+
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.container .checkmark:after {
+  left: 12px;
+  top: 6px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.instruction-li {
+  display: grid;
+  margin-left: -45px;
+
+}
+
+.instruction-li li {
+  counter-increment: myIndex;
+  list-style-type: none;
+  margin-bottom: 20px;
+  margin-left: 10px;
+}
+
+.instruction-li li::before {
+  position: relative;
+  padding: 5px 10px ;
+  color: white;
+  border:none;
+  border-radius: 4px;
+  background-color:#f39121;
+  font-size: 20px;
+  min-width: 10px;
+  content: counter(myIndex);
+  margin-left: -35px;
+
+}
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+}
+
+footer > p {
+  margin: 15px 0;
+
+}
+
+@media screen and (max-width: 1024px) {
+    body  {
+      margin: 0 4.5rem;
+      width: 80vw;
+      font-family: 'Roboto', sans-serif;
+      font-size: 1.1rem;
+
+    }
+    .div-first {
+      font-size: 0.8rem;
+      font-weight: 100;
+      margin:20px 0;
+      width: 75%;
+    }
+    .aside-svg {
+      order:2;
+      display:grid;
+      grid-template-columns: 35% 65%;
+      grid-gap: 10px;
+      justify-content: space-between;
+      
+    }
+  
+    .span-biger  {
+      padding: 0 10px;
+      margin: 15px 0;
+      font-size: 0.8rem;
+  
+    }
+  
+    .span-orange {
+      color: orangered;
+      font-size: 0.7rem;
+    }
+  
+  svg {
+     margin: 25px;
+
+  }
+  
+  h1 {
+      font-size: 2rem;
+    }
+
+    
+}
+@media screen and (max-width: 800px) {
+  body  {
+    margin: 0 4.5rem;
+    width: 80vw;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.1rem;
+
+  }
+  
+  .aside-svg {
+    order: 1;
+    display: flex;
+    flex-direction: row;
+    justify-items: center;
+    box-shadow: none;
+    margin-left: 0px;
+    
+  }
+
+  svg {
+    margin: 0;
+
+  }
+
+  section {
+    order: 2;
+   
+  }
+       
+  .ingredients {
+    display: grid;
+    width: 90%;
+    padding-right: 1rem;
+
+  }
+
+  .span-op {
+    padding: 0;
+    margin: 0;
+    font-size: 0.6rem;
+  }
+
+  .span-biger {
+    padding: 0 ;
+    margin: 0;
+    font-size: 0.8rem;
+  
+  }
+
+  h1 {
+    font-size: 2rem;
+
+  }
+
+    main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+        
+  }
+}
+
+    @media screen and (max-width: 400px) {
+      body  {
+        margin: 0 auto;
+        width: 80vw;
+        font-family: 'Roboto', sans-serif;
+        font-size: 0.8rem;
+        width: 80%;
+    }
+
+      .div-first {
+        font-size: 0.6rem;
+        font-weight: 100;
+        margin: 20px 0;
+        width: 100%;
+    }
+      .aside-svg {
+        order: 1;
+        display: flex;
+        flex-direction: row;
+        justify-items: center;
+        box-shadow: none;
+        margin-left: 0px;
+        width: 90%;
+    }
+
+      .ingredients {
+        display: grid;
+        width: 100%;
+        padding-right: 1rem;
+
+  }
+
+      .span-op {
+        padding: 0;
+        font-size: 0.6rem;
+  }
+
+      .container {
+      display: block;
+      position: relative;
+      padding-left: 15pxpx;
+      margin-bottom: 12px;
+      cursor: pointer;
+  }
+
+}
